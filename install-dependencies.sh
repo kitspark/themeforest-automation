@@ -12,7 +12,7 @@ sudo apt install -y python3-slugify
 npm i -g markdown-to-document@latest
 
 # Install Tera CLI
-cargo install tera-cli
+cargo install --git https://github.com/chevdor/tera-cli
 
 # Install LicenseFinder
 gem install license_finder
