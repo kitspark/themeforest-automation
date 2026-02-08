@@ -6,13 +6,13 @@ set -e
 sudo apt update && sudo apt upgrade -y
 
 # Install python-slugify
-pip install python-slugify
+pip install --upgrade python-slugify
 
 # Install markdown-to-document
-npm i markdown-to-document@"<1.0.0" -g
+npm i -g markdown-to-document@latest
 
 # Install Tera CLI
-cargo install --git https://github.com/chevdor/tera-cli
+cargo install tera-cli
 
 # Install LicenseFinder
 gem install license_finder
