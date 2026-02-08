@@ -12,7 +12,19 @@ STRIP() {
   echo "$(cat - | tr -dc '[:alnum:]\n\r' | tr '[:upper:]' '[:lower:]')"
 }
 
-STRINGS_TO_CHECK=('111 total' '104 MIT' '3 New BSD' '3 ISC' '1 BSD Zero Clause License')
+STRINGS_TO_CHECK=(
+  'Dependencies'
+  'axios'
+  'chalk'
+  'commander'
+  'express'
+  'lodash'
+  'moment'
+  'react'
+  'react-dom'
+  'tslib'
+  'vue'
+)
 
 PANDOC_STDOUT="$(pandoc --from html --to plain "$OUTPUT_FILE")"
 
