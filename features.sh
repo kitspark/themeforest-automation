@@ -9,7 +9,7 @@ apt update
 apt install sudo curl procps build-essential -y
 
 # Install Node.js
-curl -fsSL https://deb.nodesource.com/setup_18.x | bash && apt install nodejs -y
+curl -fsSL https://deb.nodesource.com/setup_22.x | bash && apt install nodejs -y
 
 # Install Rustup
 RUSTPUP_PATH=/root/.cargo/env
@@ -25,7 +25,7 @@ RUBY_PATH=/usr/local/rvm/scripts/rvm
 
 curl -sSL https://rvm.io/pkuczynski.asc | gpg --import -
 
-curl -sSL https://get.rvm.io | bash -s stable --ruby="3.0"
+curl -sSL https://get.rvm.io | bash -s stable --ruby="3.3.8"
 
 source $RUBY_PATH
 

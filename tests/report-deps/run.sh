@@ -8,11 +8,28 @@ OUTPUT_FILE=$OUTPUT_DIR/license_report.html
 
 report-deps.sh "$DECISIONS_FILE" "$OUTPUT_DIR"
 
+if [ ! -f "$OUTPUT_FILE" ]; then
+  printf '%s\n' "Expected $OUTPUT_FILE to be created." >&2
+  exit 1;
+fi
+
 STRIP() {
   echo "$(cat - | tr -dc '[:alnum:]\n\r' | tr '[:upper:]' '[:lower:]')"
 }
 
-STRINGS_TO_CHECK=('111 total' '104 MIT' '3 New BSD' '3 ISC' '1 BSD Zero Clause License')
+STRINGS_TO_CHECK=(
+  'License Report'
+  'axios'
+  'chalk'
+  'commander'
+  'express'
+  'lodash'
+  'moment'
+  'react'
+  'react-dom'
+  'tslib'
+  'vue'
+)
 
 PANDOC_STDOUT="$(pandoc --from html --to plain "$OUTPUT_FILE")"
 

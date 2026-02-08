@@ -6,10 +6,10 @@ set -e
 sudo apt update && sudo apt upgrade -y
 
 # Install python-slugify
-pip install python-slugify
+sudo apt install -y python3-slugify
 
 # Install markdown-to-document
-npm i markdown-to-document@"<1.0.0" -g
+npm i -g markdown-to-document@latest
 
 # Install Tera CLI
 cargo install --git https://github.com/chevdor/tera-cli
