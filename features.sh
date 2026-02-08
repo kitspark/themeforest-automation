@@ -25,7 +25,7 @@ RUBY_PATH=/usr/local/rvm/scripts/rvm
 
 curl -sSL https://rvm.io/pkuczynski.asc | gpg --import -
 
-curl -sSL https://get.rvm.io | bash -s stable --ruby="3.3"
+curl -sSL https://get.rvm.io | bash -s stable --ruby="3.3.8"
 
 source $RUBY_PATH
 
